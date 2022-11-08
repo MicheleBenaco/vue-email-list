@@ -13,12 +13,12 @@
 </head>
 <body>
     <div id="app">
-
+        <h1>Scegli la tua Random Email </h1>
         <ul>
             <li v-for="(email,index) in arrayemail" :key="index">
                 {{email}}</li>
         </ul>
-        <button></button>
+        <button @click="changeEmail">Cambia email</button>
 
 
 

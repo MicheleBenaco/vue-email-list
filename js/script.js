@@ -8,16 +8,25 @@ const app = createApp ({
       }
     },
     methods:{
+      changeEmail(){
+        for(let i = 0; i<10; i++){
 
+          axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((respnose)=>{
+          console.log(respnose.data.response);
+          this.arrayemail.push(respnose.data.response);
+          })
+        }
+        this.arrayemail.splice(0)
+      }
     },
     created(){
-      for(let i = 0; i<10; i++){
+      // for(let i = 0; i<10; i++){
 
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((respnose)=>{
-        console.log(respnose.data.response);
-        this.arrayemail.push(respnose.data.response);
-        })
-      }
+      //   axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((respnose)=>{
+      //   console.log(respnose.data.response);
+      //   this.arrayemail.push(respnose.data.response);
+      //   })
+      // }
 
   
     },
