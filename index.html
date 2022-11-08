@@ -14,7 +14,7 @@
 <body>
     <div id="app">
         <h1>Scegli la tua Random Email </h1>
-        <ul>
+        <ul v-if="arrayemail.length >= 10 ">
             <li v-for="(email,index) in arrayemail" :key="index">
                 {{email}}</li>
         </ul>
